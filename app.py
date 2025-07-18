@@ -12,7 +12,7 @@ def load_model():
 model = load_model()
 
 # واجهة التطبيق
-st.title("YOLOv8 Object Detection App")
+st.title("Object Detection App")
 st.write("Upload an image and click **Detect** to see the objects detected.")
 
 # رفع الصورة
@@ -46,7 +46,7 @@ if uploaded_file is not None:
 
             # تكبير الخط حسب حجم الصورة
             font_scale = max(0.7, annotated_img.shape[1] / 1000)
-            font_thickness = 4
+            font_thickness = 2
 
             # حجم النص
             (text_width, text_height), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, font_scale, font_thickness)
